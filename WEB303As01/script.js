@@ -5,7 +5,7 @@
 
 $(document).ready(function () {
 
-	$('fieldset').change(function () {
+	$('fieldset').keyup(function () {
 
 		//console.log('fieldset Changed');
 
