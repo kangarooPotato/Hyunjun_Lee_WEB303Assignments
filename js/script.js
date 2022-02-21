@@ -1,11 +1,37 @@
 /*
     Assignment #4
-    {Your name here}
+    { Hyun-jun Lee }
 */
 
 $(function () {
     // your code here
 
+    navigator.geolocation.getCurrentPosition(success, () => {
+        alert("Please allow me to search your location.");
+        console.log("fail");
+    });
+  
+    function success(position) {
+
+        let gioLati = position.coords.latitude;
+        let gioLong = position.coords.longitude;
+        let gioTime = position.timestamp;
+
+        $("div#locationhere").html("<b>Latitude: </b> " + position.coords.latitude + "</br> <b>Longitude: </b> " + position.coords.longitude);
+        console.log("Position object: ", position);
+        console.log("Timestamp: ", position.timestamp);
+        console.log("latitude: ", position.coords.latitude, ", longitude: ", position.coords.longitude);
+        
+        localStorage.setItem("userLatitude", gioLati );
+        localStorage.setItem("userLongitude", gioLong );
+        localStorage.setItem("userTimestamp", gioTime );
+    }
+  
+    //localStorage.setItem("food", "banana");
+
+    
+
+    
 
 
 
