@@ -6,10 +6,12 @@
 $(function () {
 	// your code here
 
-	navigator.geolocation.getCurrentPosition(success, () => {
+	navigator.geolocation.getCurrentPosition(success, fail);
+
+	function fail() {
 		$('#content').html("Please allow me to search your location.");
-		console.log("failed to get giolocation");
-	});
+		console.log("Failed to get giolocation");
+	};
 
 	function success(position) {
 
@@ -30,8 +32,12 @@ $(function () {
 		localStorage.setItem("acc", gioAccu);
 
 		if (oldLati || oldLong) {
+			
+			let oldPos = `<b>Old Latitude: </b>${oldLati}<br><b>Old Longitude: </b>${oldLong}<br><b>Old Accuration : </b>${oldAccu}`
+			
+			let newPos = `<b>New Latitude: </b>${gioLati}<br><b>New Longitude: </b> ${gioLong}<br><b>New Accuration : </b>${gioAccu}`
 
-			$('div#locationhere').html(`<b>Old Latitude: </b>${oldLati}<br><b>Old Longitude: </b>${oldLong}<br><b>Old Accuration : </b>${oldAccu}<br>ㅡ<br><b>New Latitude: </b>${gioLati}<br><b>New Longitude: </b> ${gioLong}<br><b>New Accuration : </b>${gioAccu}`);
+			$('div#locationhere').html(`${oldPos}<br>ㅡ<br>${newPos}`);
 
 			let distance = calcDistanceBetweenPoints(gioLati, gioLong, oldLati, oldLong) / 1000;
 
