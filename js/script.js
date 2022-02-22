@@ -21,7 +21,7 @@ $(function () {
 		let gioLong = position.coords.longitude;
 		let gioAccu = position.coords.accuracy;
 
-		$("div#locationhere").html("<b>Latitude: </b> " + gioLati + "</br> <b>Longitude: </b> " + gioLong + "<br><b>Old Accuration : " + oldAccu + "</b>");
+		$("div#locationhere").html("<b>Latitude: </b> " + gioLati + "</br> <b>Longitude: </b> " + gioLong);
 
 		console.log(position);
 
@@ -31,10 +31,10 @@ $(function () {
 
 		if (oldLati || oldLong) {
 
-			$('div#locationhere').html("<b>Old Latitude: </b>" + gioLati + "</br> <b>Old Longitude: </b>" + gioLong + "<br>ㅡ<br><b>New Latitude: </b>" + oldLati + "<br><b>New Longitude: </b>" + oldLong + "<br><b>New Accuration : " + gioAccu + "</b>");
+			$('div#locationhere').html(`<b>Old Latitude: </b>${oldLati}<br><b>Old Longitude: </b>${oldLong}<br><b>Old Accuration : </b>${oldAccu}<br>ㅡ<br><b>New Latitude: </b>${gioLati}<br><b>New Longitude: </b> ${gioLong}<br><b>New Accuration : </b>${gioAccu}`);
 
 			let distance = calcDistanceBetweenPoints(gioLati, gioLong, oldLati, oldLong) / 1000;
-			
+
 			$('div#locationhere').append("<h2>You travled..</h2> <p>You tavled " + distance.toFixed(2) + " km from your last location.</p>");
 
 
