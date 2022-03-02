@@ -38,7 +38,18 @@ $(document).ready(function () {
 
 	for (const property in Ford) {
 		console.log(`Property: ${property} / and value: ${Ford[property]}`);
-	}
-
+	};
+	
+function a(ContentItem){
+	 console.log(`${ContentItem.carDes}`);
+ };
+	
+	a(Ford);
+	
+//	<div id="content-item-0">
+//		<h4>name here</h4>
+//		<p>description here</p>
+//		<div>category genre here</div>
+//	</div>
 
 });
