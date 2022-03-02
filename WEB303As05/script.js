@@ -15,28 +15,29 @@ $(document).ready(function () {
 			this.carGenre = genre;
 		}
 	}
+	
+	//updateContentItem
 
 	//make 5 contents items
-	let F150 = new ContentItem("0", "F150", "strong car", "SUV");
-	let content1 = new ContentItem("id1","name1","exp1","genre1");
-	let content2 = new ContentItem("id2","name2","exp2","genre2");
-	let content3 = new ContentItem("id3","name3","exp3","genre3");
-	let content4 = new ContentItem();
-	
-	let F150String = `${F150}`;
-	let content1String = `${content1}`;
-	// note: console.log doesn't invoke toString
-	
-//	console.log(F150);
-//	console.log(F150String);
-//	console.log(content1);
-//	console.log(content1String);
-	//console.log(ContentItem);
-	
-	console.log(F150["carId"], F150.carName, F150.carDes, F150.carGenre);
-	
-	for (const property in F150){
-		console.log(`Property: ${property} / and value: ${F150[property]}`);
+	let Ford = new ContentItem(0, "F-150", "Strong car", "SUV");
+	let BMW = new ContentItem(1, "5 Series", "Expensive car", "Sedan");
+	let Audi = new ContentItem(2, "name", "exp", "genre");
+	let Benz = new ContentItem(3);
+	let Toyota = new ContentItem(4);
+
+	let FordString = `${Ford}`;
+	let BMWString = `${BMW}`;
+
+	console.log(Ford);
+	//console.log(FordString);
+	console.log(BMW);
+	//	console.log(BMWString);
+	console.log(ContentItem);
+
+	console.log(Ford["carId"], Ford.carName, Ford.carDes, Ford.carGenre);
+
+	for (const property in Ford) {
+		console.log(`Property: ${property} / and value: ${Ford[property]}`);
 	}
 
 
