@@ -21,18 +21,21 @@ $(document).ready(function () {
 	//make 5 contents items
 	let Ford = new ContentItem(0, "F-150", "Strong car", "SUV");
 	let BMW = new ContentItem(1, "5 Series", "Expensive car", "Sedan");
-	let Audi = new ContentItem(2, "name", "exp", "genre");
-	let Benz = new ContentItem(3);
-	let Toyota = new ContentItem(4);
+	let Audi = new ContentItem(2, "name3", "exp", "genre");
+	let Benz = new ContentItem(3, "name4", "exp", "genre");
+	let Toyota = new ContentItem(4, "name5", "exp", "genre");
 
-	let FordString = `${Ford}`;
-	let BMWString = `${BMW}`;
-
+//	let FordString = `${Ford}`;
+//	let BMWString = `${BMW}`;
+//	let AudiString = `${Audi}`;
+	
 	console.log(Ford);
 	//console.log(FordString);
 	console.log(BMW);
 	//	console.log(BMWString);
-	console.log(ContentItem);
+	console.log(Audi);
+	
+	//console.log(ContentItem); 
 
 	console.log(Ford["carId"], Ford.carName, Ford.carDes, Ford.carGenre);
 
@@ -40,16 +43,20 @@ $(document).ready(function () {
 		console.log(`Property: ${property} / and value: ${Ford[property]}`);
 	};
 	
-function a(ContentItem){
-	 console.log(`${ContentItem.carDes}`);
- };
+	function add(car){
+		//console.log(car.carName);
 	
-	a(Ford);
+	$('#content-item-list').append(`<div id="content-item-${car.carId}">
+				<h4>${car.carName}</h4>
+                <p>${car.carDes}</p>
+                <div>${car.carGenre}</div></div><br><br>`);
+ 	};
 	
-//	<div id="content-item-0">
-//		<h4>name here</h4>
-//		<p>description here</p>
-//		<div>category genre here</div>
-//	</div>
-
+	add(BMW);
+	add(Ford);
+	add(Audi);
+	add(Benz);
+	add(Toyota);
+	
+	//$(#conte)
 });
