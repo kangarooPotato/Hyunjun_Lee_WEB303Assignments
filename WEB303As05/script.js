@@ -14,6 +14,9 @@ $(document).ready(function () {
 			this.carDes = description;
 			this.carGenre = genre;
 		}
+		toString() {
+			return `<div id="content-item-${car.carId}"><h4>${car.carName}</h4><p>${car.carDes}</p><div>${car.carGenre}</div></div>`;
+		}
 	}
 	
 	//updateContentItem
@@ -21,9 +24,9 @@ $(document).ready(function () {
 	//make 5 contents items
 	let Ford = new ContentItem(0, "F-150", "Strong car", "SUV");
 	let BMW = new ContentItem(1, "5 Series", "Expensive car", "Sedan");
-	let Audi = new ContentItem(2, "name3", "exp", "genre");
-	let Benz = new ContentItem(3, "name4", "exp", "genre");
-	let Toyota = new ContentItem(4, "name5", "exp", "genre");
+	let Audi = new ContentItem(2, "A7", "Cool car", "Fastback");
+	let Benz = new ContentItem(3, "G-Class", "Big car", "SUV");
+	let Volvo = new ContentItem(4, "IRON KNIGHT", "Nice Sports truck", "Truck");
 
 //	let FordString = `${Ford}`;
 //	let BMWString = `${BMW}`;
@@ -49,14 +52,19 @@ $(document).ready(function () {
 	$('#content-item-list').append(`<div id="content-item-${car.carId}">
 				<h4>${car.carName}</h4>
                 <p>${car.carDes}</p>
-                <div>${car.carGenre}</div></div><br><br>`);
+                <div>${car.carGenre}</div></div>`);
  	};
 	
 	add(BMW);
 	add(Ford);
 	add(Audi);
 	add(Benz);
-	add(Toyota);
+	add(Volvo);
 	
-	//$(#conte)
+	for(var i=0; i<5; i++){
+	$(`#content-item-${i}`).css({"border": "solid #929ca4 1px", "width": "300px", "padding":"10px", "margin": "10px"});
+	};
+	
+
+	
 });
