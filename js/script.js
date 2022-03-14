@@ -3,7 +3,7 @@ $(function () {
 	$('.accordion').on('click', '.accordion-control', function (e) {
 		e.preventDefault();
 		$(this)
-			.next('.accordion - panel')
+			.next('.accordion-panel')
 			.not(':animated')
 			.slideToggle();
 	});
@@ -11,11 +11,11 @@ $(function () {
 
 	$('.tab-list').each(function () {
 		// Find lists of tabs
-		var $this = $(this),
+		var $this = $(this);
 			// Store this list
-			var $tab = $this.find('li.active'),
+			var $tab = $this.find('li.active');
 				// Get the active li
-				var $link = $tab.find('a'),
+				var $link = $tab.find('a');
 					// Get its link
 					var $panel = $($link.attr('href'));
 		// Get active panel
