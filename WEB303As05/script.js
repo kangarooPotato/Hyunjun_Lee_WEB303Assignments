@@ -14,23 +14,34 @@ $(document).ready(function () {
 			this.carDes = description;
 			this.carGenre = genre;
 		}
+		
+		//updateContentItem
+		updateContentItem(id, name, description, genre) {
+			if (id == this.id && (name!=null || description!=null || genre!=null)){
+					this.carName = name;
+					this.carDes = description;
+					this.carGenre = genre;
+				}
+		}
+		
 		toString() {
-			return `<div id="content-item-${car.carId}"><h4>${car.carName}</h4><p>${car.carDes}</p><div>${car.carGenre}</div></div>`;
+			return `<div class="dontent-itme-wrapper" id="content-item-${car.carId}">
+						<h2>${car.carName}</h2>
+						<p>${car.carDes}</p>
+						<div>${car.carGenre}</div>
+					</div>`;
 		}
 	}
 	
-	//updateContentItem
+	let carArray = [];
 
 	//make 5 contents items
-	let Ford = new ContentItem(0, "F-150", "Strong car", "SUV");
-	let BMW = new ContentItem(1, "5 Series", "Expensive car", "Sedan");
-	let Audi = new ContentItem(2, "A7", "Cool car", "Fastback");
-	let Benz = new ContentItem(3, "G-Class", "Big car", "SUV");
-	let Volvo = new ContentItem(4, "IRON KNIGHT", "Nice Sports truck", "Truck");
+	carArray[1] = new ContentItem(0, "F-150", "Strong car", "SUV");
+	carArray[2] = new ContentItem(1, "5 Series", "Expensive car", "Sedan");
+	carArray[3] = new ContentItem(2, "A7", "Cool car", "Fastback");
+	carArray[4] = new ContentItem(3, "G-Class", "Big car", "SUV");
+	carArray[5] = new ContentItem(4, "IRON KNIGHT", "Nice Sports truck", "Truck");
 
-//	let FordString = `${Ford}`;
-//	let BMWString = `${BMW}`;
-//	let AudiString = `${Audi}`;
 	
 	console.log(Ford);
 	//console.log(FordString);
@@ -49,22 +60,21 @@ $(document).ready(function () {
 	function add(car){
 		//console.log(car.carName);
 	
-	$('#content-item-list').append(`<div id="content-item-${car.carId}">
-				<h4>${car.carName}</h4>
+	$('#content-item-list').append(`<div class="content-item-wapper" id="content-item-${car.carId}">
+				<h2>${car.carName}</h2>
                 <p>${car.carDes}</p>
                 <div>${car.carGenre}</div></div>`);
  	};
+
 	
-	add(BMW);
-	add(Ford);
-	add(Audi);
-	add(Benz);
-	add(Volvo);
+//	for(var i=0; i<5; i++){
+//	$(`#content-item-${i}`).css({"border": "solid #929ca4 1px", "width": "300px", "padding":"10px", "margin": "10px"});
+//	};
 	
-	for(var i=0; i<5; i++){
-	$(`#content-item-${i}`).css({"border": "solid #929ca4 1px", "width": "300px", "padding":"10px", "margin": "10px"});
-	};
-	
+	var i = 0;
+	carArray.forEach(carElement =>{
+		$('#content-item-list').append(carElement + "").css("border","10px");
+	});
 
 	
 });
