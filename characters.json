@@ -1,0 +1,53 @@
+{
+    "MCU": [
+        {
+            "heroName": "Iron Man",
+            "species": "Human",
+            "gender": "Male",
+            "fname": "Anthony",
+            "lname": "Stark",
+        },
+        {
+            "heroName": "Captain America",
+            "species": "Human",
+            "gender": "Male",
+            "fname": "Steven",
+            "lname": "Rogers",
+        },
+        {
+            "heroName": "Thor",
+            "species": "Asgardian",
+            "gender": "Male",
+            "fname": "Thor",
+            "lname": "Odinson",
+        },
+        {
+            "heroName": "Hulk",
+            "species": "Human",
+            "gender": "Male",
+            "fname": "Robert",
+            "lname": "Banner",
+        },
+        {
+            "heroName": "Spider Man",
+            "species": "Human",
+            "gender": "Male",
+            "fname": "Peter",
+            "lname": "Parker",
+        },
+        {
+            "heroName": "Scarlet Witch",
+            "species": "Human",
+            "gender": "Female",
+            "fname": "Wanda",
+            "lname": "Maximoff",
+        },
+        {
+            "heroName": "Black Widow",
+            "species": "Human",
+            "gender": "Female",
+            "fname": "Natalia",
+            "lname": "Romanova",
+        }  
+    ]
+}
