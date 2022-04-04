@@ -5,9 +5,13 @@ html, body{
 }
 
 table.styled-better {
-  border: 1px solid #000;
+  border: 10px solid lightblue;
 }
 table.styled-better td {
   border: 1px solid #000;
-  padding: 8px;
+  padding: 16px;
+}
+
+.tr1{
+    background-color: lightblue;
 }
