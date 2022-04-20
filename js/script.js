@@ -1,10 +1,12 @@
 $(function () {
 
 	$('.accordion').on('click', '.accordion-control', function (e) {
-		e.preventDefault();
+		
+		//$('.accordion-panel').css('display','none');
+		$(this).parent().find('.accordion-panel').slideUp()
+
 		$(this)
 			.next('.accordion-panel')
-			.not(':animated')
 			.slideToggle();
 	});
 
@@ -14,7 +16,6 @@ $(function () {
 		var $this = $(this);
 			// Store this list
 			var $tab = $this.find('li.active');
-				// Get the active li
 				var $link = $tab.find('a');
 					// Get its link
 					var $panel = $($link.attr('href'));

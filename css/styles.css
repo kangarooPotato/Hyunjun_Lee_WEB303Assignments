@@ -2,6 +2,7 @@ html,
 body {
 	margin: 0;
 	padding: 0;
+	text-align: center;
 }
 
 .accordion-panel {
@@ -12,70 +13,61 @@ body {
 	display: block;
 }
 
-
-
-
-
-.citymap img{
-    width: 400px;
-}
-#prizes{
-
-}
-#prizes h3{
-    border: 1px solid #000;
-    padding: 8px;
-    width: 500px;
-    margin: 0 auto;
-}
-#prizes div{
-    border: 1px dashed #000;
-    padding: 8px;
-    width: 500px;
-    margin: 0 auto;
+ul.accordion {
+	list-style: none;
+	margin-left: 0;
+	padding-left: 0;
 }
 
-ul.accordion{
-    list-style: none;
-    margin-left: 0;
-    padding-left: 0;
+button.accordion-control {
+	background-color: lightskyblue;
+	padding: 10px;
+	display: block;
+	width: 80%;
+	margin : 0 auto;
 }
-button.accordion-control{
-    background-color:aquamarine;
-    padding: 16px;
-    display: block;
-    width: 100%
-}
+
 .accordion-panel {
-    display: none;
-    padding: 50px;
-    border: 1px solid black;
-    font-size: 24px;
+	display: none;
+	padding: 10px;
+	border: 3px solid lightblue;
+	font-size: 10px;
+	width: 77%;
+	margin: 0 auto;
 }
 
 ul.tab-list {
-  list-style: none;
-}
-ul.tab-list li {
-  display: inline-block;
-  margin-left: 16px;
-  padding: 8px;
-  border: 1px solid blue;
-}
-ul.tab-list li.active {
-  background-color: green;
-}
-ul.tab-list li.active a {
-  color: white;
-}
-.tab-panel {
-  display: none;
-  width: 400px;
-  height: 200px;
-  padding: 50px;
-  border: 1px solid red;
-}
-.tab-panel.active {
-  display: block;
+    padding-inline-start: 0px;
 }
 
+ul.tab-list li {
+	display: inline-block;
+	padding: 10px;
+	border: 3px solid black;
+}
+
+a:link {
+	color: black;
+	text-decoration: none;
+}
+
+ul.tab-list li.active {
+	background-color: cadetblue;
+}
+
+ul.tab-list li.active a {
+	color: white;
+}
+
+.tab-panel {
+	display: none;
+	width: 200px;
+	height: 1000px;
+	padding: 100px;
+	border: 5px solid black;
+  	margin: 0 auto;
+}
+
+.tab-panel.active {
+	display: block;
+}
